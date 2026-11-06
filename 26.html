@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b18">
+<title>2B2R NETWORK | ورود به سرور</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+:root{--bg:#080b18;--panel:rgba(18,25,49,.78);--line:rgba(133,164,255,.2);--cyan:#55e7ff;--blue:#637dff;--purple:#a66cff;--text:#f3f6ff;--muted:#aab5d4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 15% 10%,#17265b 0,transparent 38%),radial-gradient(ellipse at 90% 35%,#30134e 0,transparent 34%),var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:linear-gradient(rgba(120,150,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(120,150,255,.08) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+.orb{position:fixed;width:260px;height:260px;border-radius:50%;filter:blur(90px);opacity:.22;pointer-events:none;animation:float 10s ease-in-out infinite alternate}.orb.one{background:#2bdcff;top:35%;left:-120px}.orb.two{background:#a04cff;right:-130px;top:65%;animation-delay:-4s}
+@keyframes float{to{transform:translate(35px,-45px) scale(1.2)}}@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}@keyframes pulse{50%{box-shadow:0 0 35px #55e7ff55}}@keyframes shine{to{background-position:200% center}}
+.wrap{width:min(1080px,92%);margin:auto;position:relative}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-weight:900;letter-spacing:1px;font-size:19px}.brand span{color:var(--cyan)}.nav small{color:var(--muted);font-size:12px}.hero{text-align:center;padding:78px 0 48px;animation:rise .8s both}.tag{display:inline-flex;align-items:center;gap:8px;border:1px solid #55e7ff55;background:#55e7ff0d;color:var(--cyan);padding:7px 15px;border-radius:30px;font-size:12px}.dot{width:7px;height:7px;border-radius:50%;background:#5bffb0;box-shadow:0 0 12px #5bffb0}.hero h1{font-size:clamp(38px,8vw,76px);line-height:1.2;margin:20px 0 10px;font-weight:900;background:linear-gradient(90deg,#fff,#8eefff,#b99aff,#fff);background-size:200%;color:transparent;background-clip:text;animation:shine 6s linear infinite}.hero p{color:var(--muted);max-width:620px;margin:0 auto 25px;line-height:2}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 21px;border-radius:13px;text-decoration:none;color:white;font:700 14px Vazirmatn,Tahoma;border:1px solid var(--line);background:#ffffff0a;cursor:pointer;transition:.25s}.btn:hover{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 8px 28px #55e7ff22}.primary{background:linear-gradient(110deg,#267bff,#7654ef);border:0;box-shadow:0 8px 28px #526cff35}.section-title{font-size:22px;margin:30px 0 16px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.card{background:var(--panel);border:1px solid var(--line);border-radius:21px;padding:23px;backdrop-filter:blur(15px);box-shadow:0 16px 50px #0003;animation:rise .8s both}.card:nth-child(2){animation-delay:.12s}.card h2{font-size:18px;margin:0 0 8px}.card p{color:var(--muted);font-size:13px;line-height:1.9;margin:0 0 17px}.icon{font-size:25px;margin-bottom:12px}.server-address{direction:ltr;text-align:center;word-break:break-all;background:#070c1b;border:1px dashed #55e7ff75;border-radius:12px;padding:14px 10px;color:var(--cyan);font:700 15px Consolas,monospace;margin:14px 0}.card .btn{width:100%}.teams{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:17px}.teams .card{min-height:190px}.call{border-top:2px solid #6b8cff}.chat{border-top:2px solid #b17aff}.guide{margin-top:42px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.step{background:#111a32bb;border:1px solid var(--line);padding:18px;border-radius:16px}.num{width:31px;height:31px;border-radius:10px;display:grid;place-items:center;background:#5b79ff2b;color:#9fb2ff;font-weight:900;margin-bottom:10px}.step h3{font-size:14px;margin:0 0 7px}.step p{font-size:12px;color:var(--muted);line-height:1.9;margin:0}.notice{margin-top:18px;padding:17px 19px;border-radius:15px;border:1px solid #ffc96a55;background:#ffc96a0b;color:#f7d99d;font-size:12px;line-height:2}.footer{text-align:center;color:#7582a8;font-size:11px;padding:45px 0 25px}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;background:#172747;border:1px solid #55e7ff66;border-radius:12px;padding:11px 18px;font-size:13px;transition:.25s;pointer-events:none;z-index:5}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:700px){.grid,.teams{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.hero{padding-top:55px}.nav small{display:none}.card{padding:20px}}
+</style>
+</head>
+<body>
+<div class="orb one"></div><div class="orb two"></div>
+<header class="wrap nav"><div class="brand">❄️ 2B2R <span>NETWORK</span></div><small>سرور ماینکرفت • ارتباط با اعضا</small></header>
+<main class="wrap">
+<section class="hero">
+  <div class="tag"><span class="dot"></span> شبکه 2B2R فعال است</div>
+  <h1>WELCOME TO 2B2R</h1>
+  <p>به دنیای 2B2R خوش آمدی! از اینجا به سرور ماینکرفت متصل شو، وارد گروه تیمز شو و برای گفت‌وگو با اعضا به جلسه آنلاین بپیوند.</p>
+  <div class="actions"><a class="btn primary" href="#connect">🚀 اتصال به سرور</a><a class="btn" href="#teams">💬 ارتباط در Teams</a></div>
+</section>
+<section id="connect">
+  <h2 class="section-title">🎮 اتصال به سرور ماینکرفت</h2>
+  <div class="grid">
+    <article class="card">
+      <div class="icon">🌐</div><h2>آدرس سرور 2B2R</h2>
+      <p>آدرس زیر را کپی کن و در بخش Multiplayer بازی Minecraft وارد کن.</p>
+      <div class="server-address" id="serverIp">weakness-warriors.tun.ply.gg</div>
+      <button class="btn primary" onclick="copyServer()">📋 کپی آدرس سرور</button>
+    </article>
+    <article class="card">
+      <div class="icon">🧭</div><h2>روش ورود به ماینکرفت</h2>
+      <p>بازی را باز کن، وارد بخش چندنفره شو و آدرس سرور را به فهرست سرورها اضافه کن.</p>
+      <ol style="color:#c5cde4;font-size:12px;line-height:2.2;padding-right:20px;margin:0">
+        <li>روی <b>Multiplayer</b> بزن.</li><li><b>Add Server</b> را انتخاب کن.</li><li>آدرس کپی‌شده را در Server Address قرار بده.</li><li>روی <b>Done</b> و سپس <b>Join Server</b> بزن.</li>
+      </ol>
+    </article>
+  </div>
+</section>
+<section id="teams">
+  <h2 class="section-title">💠 ارتباط با اعضا در Microsoft Teams</h2>
+  <div class="teams">
+    <article class="card call"><div class="icon">🎧</div><h2>لینک تماس گروهی</h2><p>برای شرکت در جلسه صوتی/تصویری و صحبت با اعضای 2B2R از این لینک استفاده کن.</p><a class="btn primary" href="https://teams.live.com/meet/9378594436255?p=K6wYWCofpJEtg287DA" target="_blank" rel="noopener">ورود به کال تیمز ↗</a></article>
+    <article class="card chat"><div class="icon">👥</div><h2>لینک گروه چت</h2><p>برای عضویت در گروه گفت‌وگو، پیام دادن و دریافت اطلاعیه‌ها وارد گروه شو.</p><a class="btn" href="https://teams.live.com/l/invite/FEA6iyJw6lUf1pB_w" target="_blank" rel="noopener">عضویت در گروه چت ↗</a></article>
+  </div>
+</section>
+<section class="guide">
+  <h2 class="section-title">📘 آموزش ورود به Microsoft Teams</h2>
+  <div class="steps">
+    <article class="step"><div class="num">۱</div><h3>باز کردن لینک</h3><p>روی لینک کال یا گروه چت در همین صفحه بزن. لینک در صفحه‌ای جدا باز می‌شود.</p></article>
+    <article class="step"><div class="num">۲</div><h3>انتخاب روش ورود</h3><p>اگر برنامه Teams نصب است، گزینه باز کردن برنامه را انتخاب کن؛ در غیر این صورت از نسخه وب استفاده کن.</p></article>
+    <article class="step"><div class="num">۳</div><h3>ورود یا پیوستن</h3><p>در صورت درخواست، با حساب Microsoft وارد شو. برای تماس، نام نمایشی را وارد کن و گزینه Join now را بزن.</p></article>
+  </div>
+  <div class="notice">💡 <b>نکته‌های مهم:</b> برای تماس، اجازه دسترسی میکروفون و دوربین را فقط در صورت نیاز بده. قبل از ورود به جلسه، میکروفون را بررسی کن. اگر لینک باز نشد، آن را در مرورگر دیگری مثل Microsoft Edge باز کن یا برنامه Teams را به‌روز کن. هیچ‌وقت رمز حساب Microsoft خود را در اختیار دیگران قرار نده.</div>
+</section>
+<footer class="footer">© 2B2R NETWORK — با احترام به جامعه بازیکنان ماینکرفت ساخته شده است.</footer>
+</main>
+<div class="toast" id="toast">آدرس سرور کپی شد! ✓</div>
+<script>
+async function copyServer(){
+ const value=document.getElementById('serverIp').textContent.trim();
+ try{await navigator.clipboard.writeText(value);}
+ catch(e){const t=document.createElement('textarea');t.value=value;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();}
+ const toast=document.getElementById('toast');toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1900);
+}
+</script>
+</body>
+</html>
